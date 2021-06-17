@@ -5,11 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WordPredictions"
         mc:Ignorable="d"
-        Title="MainWindow" Height="379.621" Width="632.583" Loaded="Window_Loaded">
+        Title="MainWindow" Height="446.19" Width="370.806" Loaded="Window_Loaded">
     <Grid>
-        <TextBox x:Name="inputTexbox" HorizontalAlignment="Left" Height="40" Margin="30,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" TextChanged="inputTexbox_TextChanged"/>
-        <ListBox x:Name="SQLiteListBox" HorizontalAlignment="Left" Height="268" Margin="345,39,0,0" VerticalAlignment="Top" Width="100" SelectionChanged="SQLiteListBox_SelectionChanged"/>
-        <ListBox x:Name="WebServiceListBox" HorizontalAlignment="Left" Height="268" Margin="483,39,0,0" VerticalAlignment="Top" Width="100" SelectionChanged="WebServiceListBox_SelectionChanged"/>
+        <TextBox x:Name="inputTexbox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="33" Margin="30,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" TextChanged="inputTexbox_TextChanged" TextAlignment="Justify"/>
+        <ListBox x:Name="SQLiteListBox" HorizontalAlignment="Left" Height="268" Margin="30,127,0,-44.6" VerticalAlignment="Top" Width="100" SelectionChanged="SQLiteListBox_SelectionChanged"/>
+        <ListBox x:Name="WebServiceListBox" HorizontalAlignment="Left" Height="268" Margin="215,127,0,-44.6" VerticalAlignment="Top" Width="100" SelectionChanged="WebServiceListBox_SelectionChanged"/>
+        <Label Content="Words from SQLite" HorizontalAlignment="Left" Margin="30,101,0,0" VerticalAlignment="Top"/>
+        <Label Content="Words from WebService" HorizontalAlignment="Left" Margin="215,101,0,0" VerticalAlignment="Top"/>
+        <Label Content="Input Text :" HorizontalAlignment="Left" Margin="30,15,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

@@ -36,7 +36,6 @@ namespace WordPredictions
             try
             {
                 var result = new List<String>();
-                Console.WriteLine("Searching Word: " + searchingWord);
                 var request = WebRequest.CreateHttp(new Uri($"{url}?locale={language}&text=" + searchingWord));
                 request.Headers.Add("Authorization", $"Bearer {token}");
                 request.Method = "GET";
