@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordPredictions", "WordPredictions\WordPredictions.csproj", "{684D06EE-A14A-427D-BD30-AE428C72530A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestWordPrediction", "UnitTestWordPrediction\UnitTestWordPrediction.csproj", "{A602998D-9C20-4AEC-81F7-997E004CDB50}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{684D06EE-A14A-427D-BD30-AE428C72530A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{684D06EE-A14A-427D-BD30-AE428C72530A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{684D06EE-A14A-427D-BD30-AE428C72530A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{684D06EE-A14A-427D-BD30-AE428C72530A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A602998D-9C20-4AEC-81F7-997E004CDB50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A602998D-9C20-4AEC-81F7-997E004CDB50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A602998D-9C20-4AEC-81F7-997E004CDB50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A602998D-9C20-4AEC-81F7-997E004CDB50}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {090E258F-3751-43D4-8336-358E970CF65A}
+	EndGlobalSection
+EndGlobal
