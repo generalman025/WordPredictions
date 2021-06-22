@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-	<Product Id="*" Name="SetupProject1" Language="1033" Version="1.0.0.0" Manufacturer="" UpgradeCode="e50bb891-355e-4b7e-be93-c99e2eb06aa1">
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"><?define WordPredictions_TargetDir=$(var.WordPredictions.TargetDir)?>
+	<Product Id="*" Name="SetupProject1" Language="1033" Version="1.0.0.0" Manufacturer="generalman025" UpgradeCode="e50bb891-355e-4b7e-be93-c99e2eb06aa1">
 		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
 
 		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
@@ -15,9 +15,9 @@
 		<Directory Id="TARGETDIR" Name="SourceDir">
 			<Directory Id="ProgramFilesFolder">
 				<Directory Id="INSTALLFOLDER" Name="SetupProject1" />
-			</Directory>
+      </Directory>
 		</Directory>
-	</Fragment>
+  </Fragment>
 
 	<Fragment>
 		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
@@ -25,6 +25,24 @@
 			<!-- <Component Id="ProductComponent"> -->
 				<!-- TODO: Insert files, registry keys, and other resources here. -->
 			<!-- </Component> -->
+      <Component Id="Dictionary.db" Guid="514220fa-7162-4e51-bdc5-648e7278eafa">
+        <File Id="Dictionary.db" Source="$(var.WordPredictions_TargetDir)Dictionary.db" KeyPath="yes" Checksum="yes"/>
+      </Component>
+			<Component Id="WordPredictions.exe" Guid="0db8a164-da90-4db3-8abe-5e3bd4f7e97d">
+			  <File Id="WordPredictions.exe" Name="WordPredictions.exe" Source="$(var.WordPredictions_TargetDir)WordPredictions.exe" />
+			</Component>
+			<Component Id="WordPredictions.exe.config" Guid="371e0e13-b9c8-4c59-ab5f-7b2e7c4d04ac">
+			  <File Id="WordPredictions.exe.config" Name="WordPredictions.exe.config" Source="$(var.WordPredictions_TargetDir)WordPredictions.exe.config" />
+			</Component>
+			<Component Id="System.Data.SQLite.dll" Guid="e7cf96b0-05e3-4c21-b4b3-a7e0682da0e5">
+			  <File Id="System.Data.SQLite.dll" Name="System.Data.SQLite.dll" Source="$(var.WordPredictions_TargetDir)System.Data.SQLite.dll" />
+			</Component>
+      <Component Id="Newtonsoft.Json.dll" Guid="df7ab17b-08d7-49ec-984d-ee3596dbc2e0">
+        <File Id="Newtonsoft.Json.dll" Name="Newtonsoft.Json.dll" Source="$(var.WordPredictions_TargetDir)Newtonsoft.Json.dll" />
+      </Component>      
+      <Component Id="SQLite.Interop.dll" Guid="4ecc9abc-0450-4854-85ed-944125a00339">
+        <File Id="SQLite.Interop.dll" Name="SQLite.Interop.dll" Source="$(var.WordPredictions_TargetDir)x86\SQLite.Interop.dll" />
+      </Component>
 		</ComponentGroup>
 	</Fragment>
 </Wix>

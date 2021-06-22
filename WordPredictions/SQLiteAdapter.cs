@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace WordPredictions
 {
@@ -13,7 +14,7 @@ namespace WordPredictions
         private string path;
         public SQLiteAdapter()
         {
-            path = "Data Source=" + Path.Combine(Directory.GetCurrentDirectory(), @"customDB\Dictionary.db");
+            path = "Data Source=" + Path.Combine(Directory.GetCurrentDirectory(), @"Dictionary.db");
         }
 
         public List<String> getWords(string word)
@@ -42,6 +43,7 @@ namespace WordPredictions
             catch (Exception e)
             {
                 Console.WriteLine(e);
+                MessageBox.Show(e.Message);
                 throw;
             }
         }
