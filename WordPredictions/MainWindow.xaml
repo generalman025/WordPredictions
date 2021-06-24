@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WordPredictions"
         mc:Ignorable="d"
-        Title="MainWindow" Height="446.19" Width="370.806" Loaded="Window_Loaded">
+        Title="MainWindow" Height="446.19" Width="372.921" Loaded="Window_Loaded">
     <Grid>
         <TextBox x:Name="inputTexbox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="33" Margin="30,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" TextChanged="inputTexbox_TextChanged" TextAlignment="Justify"/>
         <ListBox x:Name="SQLiteListBox" HorizontalAlignment="Left" Height="268" Margin="30,127,0,-44.6" VerticalAlignment="Top" Width="100" SelectionChanged="SQLiteListBox_SelectionChanged"/>
